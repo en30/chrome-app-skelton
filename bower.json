@@ -1,0 +1,11 @@
+{
+  "name": "APP_NAME",
+  "version": "0.0.0",
+  "authors": [
+    ""
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+  }
+}

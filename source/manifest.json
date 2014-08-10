@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "APP_NAME",
+  "description": "This is a skelton for chrome packaged apps.",
+  "version": "0.1",
+  "permissions": [
+  ],
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"]
+    }
+  }
+}
