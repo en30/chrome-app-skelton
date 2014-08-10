@@ -23,7 +23,7 @@ gulp.task 'manifest', ->
     .pipe gulp.dest './build/'
 
 gulp.task 'js', ->
-  gulp.src(mainBowerFiles())
+  gulp.src(mainBowerFiles(filter: /\.js$/))
     .pipe plumber()
     .pipe concat 'vendor.js'
     .pipe gulp.dest './build/js/'
