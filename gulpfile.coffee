@@ -1,6 +1,6 @@
 gulp = require 'gulp'
 plumber = require 'gulp-plumber'
-slim = require 'gulp-slim'
+jade = require 'gulp-jade'
 browserify = require 'browserify'
 concat = require 'gulp-concat'
 mainBowerFiles = require 'main-bower-files'
@@ -13,9 +13,9 @@ gulp.task 'clean', (cb)->
 
 gulp.task 'html', ->
   gulp
-    .src './source/*.slim'
+    .src './source/[^_]*.jade'
     .pipe plumber()
-    .pipe slim()
+    .pipe jade()
     .pipe gulp.dest './build/'
 
 gulp.task 'manifest', ->
@@ -50,7 +50,7 @@ gulp.task 'css', ->
 gulp.task 'watch', ['build'], ->
   gulp.watch 'source/manifest.json', ['manifest']
   gulp.watch 'source/js/**/*.{js,coffee}', ['js']
-  gulp.watch 'source/**/*.slim', ['html']
+  gulp.watch 'source/**/*.jade', ['html']
   gulp.watch 'source/css/**/*.{s,}css', ['css']
   gulp.watch 'bower_components/**/*.js', ['js']
 

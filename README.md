@@ -5,7 +5,7 @@
 - gulp
 - coffeescript
 - sass
-- slim
+- jade
 - bower
 - browserify
 
